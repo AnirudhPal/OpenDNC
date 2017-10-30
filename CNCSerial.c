@@ -19,6 +19,7 @@ speed_t BAUD = B115200;			// Baud Rate
 int cncOpen(char* dev, speed_t baud);	// Used to Open CNC Port
 void cncSendXM(int fd, int file);	// Sends File over XMODEM
 void testEcho(int fd);			// Testing Termios
+const char verbose = 1;
 const int CREATE = O_WRONLY | O_CREAT | O_TRUNC;
 
 /** Main Thread **/
@@ -162,7 +163,7 @@ void cncSendXM(int fd, int file) {
 				printf("cncSendXM: read() form Device Failed!!!\n");
 		}
 
-		if(1) {
+		if(verbose) {
 			printf("Block Num: %d\n", packet[1]);
 			printf("Block Negative: %d\n", packet[2]);
 			printf("CheckSum: %d\n", packet[131]);
@@ -177,30 +178,12 @@ void cncSendXM(int fd, int file) {
 			break;
 	}
 
-	/**
 	// End Of Transmission
-	char res = NAK;
-	while(res != ACK) {
-		// Send Packet 
-		write(fd, EOT, 1);
-
-		// Response
-		read(fd, &res, 1);
-	}
-	
-	// End Of Transmission BLOCK
-	res = NAK;
-	while(res != ACK) {
-		// Send Packet 
-		write(fd, ETB, 1);
-
-		// Response
-		read(fd, &res, 1);
-	}
-	**/
+	char eot = EOT	 
+	write(fd, &eot, 1);
 
 	// Finished
-	printf("File Sent I Guess?\n");
+	printf("File Sent\n");
 }
 
 /** Recieve & Print Packets **/
@@ -245,13 +228,13 @@ void cncGetXM(int fd, int file) {
 		}
 
 		// Validate
-		if(blockN == buf[2] || checkSum == buf[131]) { 
+		if(blockN == buf[2] && checkSum == buf[131]) { 
 			// Print
-			printf("Valid\n");
-
-			// Print
-			printf("My:  %d\n", checkSum);
-			printf("Got: %d\n\n", buf[131]);
+			if(verbose) {
+				printf("Block Num: %d\n", buf[1]);
+				printf("Block Negative: %d\n", buf[2]);
+				printf("CheckSum: %d\n", buf[131]);
+			}
 
 			// Write to File
 			write(file, buf + 3, 128);
@@ -264,13 +247,17 @@ void cncGetXM(int fd, int file) {
 		// Error
 		else {
 			// Print
-			printf("Invalid\n");
+			if(verbose)
+				printf("Retrying\n\n");
 		
 			// Send NAK
 			char nak = NAK;
 			write(fd, &nak, 1);
 		}
 	}
+
+	// Finished
+	printf("File Recieved\n");
 }
 
 /** Test Code - Arduino Echo **/
