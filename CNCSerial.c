@@ -19,6 +19,7 @@ speed_t BAUD = B115200;			// Baud Rate
 int cncOpen(char* dev, speed_t baud);	// Used to Open CNC Port
 void cncSendXM(int fd, int file);	// Sends File over XMODEM
 void testEcho(int fd);			// Testing Termios
+const int CREATE = O_WRONLY | O_CREAT | O_TRUNC;
 
 /** Main Thread **/
 int main(int argc, char** argv) {
@@ -27,9 +28,10 @@ int main(int argc, char** argv) {
 
 	// Test Echo
 	//testEcho(fd);	
-
+	
 	// Open File to Send
-	int file = open(argv[2], O_RDONLY);
+	
+	int file = open(argv[2], CREATE);
 
 	// Verify its Open
 	if(file < 0) {
@@ -40,7 +42,10 @@ int main(int argc, char** argv) {
 		printf("fileOpen: Openning File Success.\nFile Descriptor Value: %d\n", file);
 
 	// Send File XModem
-	cncSendXM(fd, file);
+	//cncSendXM(fd, file);
+
+	// Get File XModem
+	cncGetXM(fd, file);
 
 	// Close
 	close(fd);
@@ -155,6 +160,13 @@ void cncSendXM(int fd, int file) {
 			// Handle Error
 			if(nbyte == -1)
 				printf("cncSendXM: read() form Device Failed!!!\n");
+		}
+
+		if(1) {
+			printf("Block Num: %d\n", packet[1]);
+			printf("Block Negative: %d\n", packet[2]);
+			printf("CheckSum: %d\n", packet[131]);
+			printf("Response: %d\n\n", res);
 		}						
 
 		// Increment Block Number
@@ -189,6 +201,76 @@ void cncSendXM(int fd, int file) {
 
 	// Finished
 	printf("File Sent I Guess?\n");
+}
+
+/** Recieve & Print Packets **/
+void cncGetXM(int fd, int file) {
+	// Request File
+	char nak = NAK;
+	write(fd, &nak, 1);
+
+	// Buffer & Read Var
+	char* buf = (char*)malloc(256*sizeof(unsigned char)); 
+	int n = 2;
+
+	// Loop till End
+	while(n > 1) {
+		// Clear Buffer
+		memset(buf, 0, 256*sizeof(char));
+
+		// Read till SOH
+		while(buf[0] != SOH && buf[0] != EOT && n > 0)
+			n = read(fd, buf, 1);
+
+		// Check if EOT
+		if(buf[0] == EOT)
+			break;
+
+		// Read Packet
+		int i;
+		for(i = 1; i < 132 && n > 0; i++)
+			n = read(fd, &buf[i], 1);
+		
+		// Set Bytes Read
+		n = i; 
+
+		// Compute Block Negative
+		char blockN = 255 - buf[1];
+
+		// Compute Check Sum
+		char checkSum = 0;
+		for(i = 3; i < 131; i++) {
+			printf("%d\n", buf[i]);
+			checkSum = checkSum + buf[i];
+		}
+
+		// Validate
+		if(blockN == buf[2] || checkSum == buf[131]) { 
+			// Print
+			printf("Valid\n");
+
+			// Print
+			printf("My:  %d\n", checkSum);
+			printf("Got: %d\n\n", buf[131]);
+
+			// Write to File
+			write(file, buf + 3, 128);
+
+			// Send ACK
+			char ack = ACK;
+			write(fd, &ack, 1);
+		}
+		
+		// Error
+		else {
+			// Print
+			printf("Invalid\n");
+		
+			// Send NAK
+			char nak = NAK;
+			write(fd, &nak, 1);
+		}
+	}
 }
 
 /** Test Code - Arduino Echo **/
