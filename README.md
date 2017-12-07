@@ -10,7 +10,7 @@ To provide some context to this document here is a list of definitions of common
 ### CNC
 
 <p align="center">
-![alt text](https://www.haascnc.com/content/dam/haascnc/machines/vertical-mills/vf-series/models/small/vf-2ss/assets/VF2ss_RC_HERO.png/jcr:content/renditions/original.png "Obtained from Haas Automation")
+<img src="https://www.haascnc.com/content/dam/haascnc/machines/vertical-mills/vf-series/models/small/vf-2ss/assets/VF2ss_RC_HERO.png/jcr:content/renditions/original.png" />
 </p>
 
 <p align="center">
@@ -23,7 +23,7 @@ CNC is the acronym for computer numerical control which is used to refer to mach
 ### Mill
 
 <p align="center">
-![alt text](https://copperberg.com/wp-content/uploads/2016/09/ab83d719b659a6ba_org-700x466.jpg "Obtained from Sandvik Coromant")
+<img src="https://copperberg.com/wp-content/uploads/2016/09/ab83d719b659a6ba_org-700x466.jpg" />
 </p>
 
 <p align="center">
@@ -41,7 +41,7 @@ Haas Automation Incorporated is an American CNC manufacturer. All the testing an
 ### Classic Control and Next Generation Control
 
 <p align="center">
-![alt text](https://service.haascnc.com/sites/default/files/Locked/3/Clear_offsets.jpg "Obtained from Haas Automation")
+<img src="https://service.haascnc.com/sites/default/files/Locked/3/Clear_offsets.jpg" />
 </p>
 
 <p align="center">
@@ -49,7 +49,7 @@ Figure 3. Image of Haas Classic Control in the work offsets menu.
 </p>
 
 <p align="center">
-![alt text](https://int.haascnc.com/images/whatsnew/NextGen-VPS1-lg_1033.jpg "Obtained from Haas Automation")
+<img src="https://int.haascnc.com/images/whatsnew/NextGen-VPS1-lg_1033.jpg" />
 </p>
 
 <p align="center">
@@ -101,7 +101,7 @@ Most might know what RS232 Serial is, but for people my age RS232 is a serial co
 ### Probing
 
 <p align="center">
-![alt text](http://resources.renishaw.com/gen/download/omp60--34686 "Obtained from Reinshaw PLC")
+<img src="http://resources.renishaw.com/gen/download/omp60--34686" />
 </p>
 
 <p align="center">
@@ -205,7 +205,7 @@ One of the peculiar attributes to consider while working with XModem on a Haas C
 Use the figures below for configaration of the CNC Controller.
 
 <p align="center">
-![alt text](https://diy.haascnc.com/sites/default/files/Locked/2/modem-sttngs.jpg "Obtained from Haas Automation")
+<img src="https://diy.haascnc.com/sites/default/files/Locked/2/modem-sttngs.jpg" />
 </p>
 
 <p align="center">
@@ -700,7 +700,7 @@ Figure 17. Arduino Source used for testing and emulation.
 </p>
 
 <p align="center">
-![alt text](https://cdn-learn.adafruit.com/assets/assets/000/009/892/medium800/adafruit_products_microsdwiring.jpg?1396899097 "Obtained from Adafruit Industries")
+<img src="https://cdn-learn.adafruit.com/assets/assets/000/009/892/medium800/adafruit_products_microsdwiring.jpg?1396899097" />
 </p>
 
 <p align="center">
@@ -787,7 +787,7 @@ The following function can be added to CNC Serial so you can read DPrint stateme
 ### Data
 
 <p align="center">
-![alt text](https://lh3.googleusercontent.com/mKYUa2aEQbfTDs6Sfg-Z5saCgmmlDar9s0eFThNVS_-3DX2GJCFxGjBcUTp0cmbipWw7BWh2PDWlQnIQVzTvNUxuQMdB4jSIliP3Lj4QxAdAYBOnp4qU-dYf7Raymy7A5qMVzElGh4IpP_RDtYEnnmM6HaSjSJkxD_v-B2YRm75PL5yOh8_bztkoMsRo2nlj7wHypYKckAtU8hi2QG8IcQZRg7Z3W_UeQ5M4CKxaGmzqLQX1iJeQjeUTXHuYXjkGEXuj57s4ZFgx8oCTfRVuTCNdNE2-2QyKBm-GwFvX4pdfI5OB-tukzc62IaPsWkdK660pY8fDSunP2O45vbAToz7QMOugP_VatAMKQd2jR0HayV_DGgVtnCQcT4vk6QUu6befrEG4I087Rhugl9ejBii-rxoWKkABk7d_R_KT9a76kJwFmakFPIdiZaj-rYGuEVtUqyOQ1jL-DJc2njj4xHK4ZcyFZWFXE_ebe4oUO5I1P0-leWDJ6EOUysc0YcXBqfSWwiV8y41-Bap52JzpGjgHeBXpgaQTSsTpDNpnlvVd9bHZzsR3Vbvdfm6suTFKnp21wJ6941-BfZqaOdfB61WJcljPufnp81BZOQK4Qh1le2xojDbfm8QeiW0ZuKMHskBus27qwK7XmPWTlGbBw-Jb6m3cw7TS1j8=w1302-h331-no "Data Obtained from DT1 and Telescope Primary Blank")
+<img src="https://lh3.googleusercontent.com/mKYUa2aEQbfTDs6Sfg-Z5saCgmmlDar9s0eFThNVS_-3DX2GJCFxGjBcUTp0cmbipWw7BWh2PDWlQnIQVzTvNUxuQMdB4jSIliP3Lj4QxAdAYBOnp4qU-dYf7Raymy7A5qMVzElGh4IpP_RDtYEnnmM6HaSjSJkxD_v-B2YRm75PL5yOh8_bztkoMsRo2nlj7wHypYKckAtU8hi2QG8IcQZRg7Z3W_UeQ5M4CKxaGmzqLQX1iJeQjeUTXHuYXjkGEXuj57s4ZFgx8oCTfRVuTCNdNE2-2QyKBm-GwFvX4pdfI5OB-tukzc62IaPsWkdK660pY8fDSunP2O45vbAToz7QMOugP_VatAMKQd2jR0HayV_DGgVtnCQcT4vk6QUu6befrEG4I087Rhugl9ejBii-rxoWKkABk7d_R_KT9a76kJwFmakFPIdiZaj-rYGuEVtUqyOQ1jL-DJc2njj4xHK4ZcyFZWFXE_ebe4oUO5I1P0-leWDJ6EOUysc0YcXBqfSWwiV8y41-Bap52JzpGjgHeBXpgaQTSsTpDNpnlvVd9bHZzsR3Vbvdfm6suTFKnp21wJ6941-BfZqaOdfB61WJcljPufnp81BZOQK4Qh1le2xojDbfm8QeiW0ZuKMHskBus27qwK7XmPWTlGbBw-Jb6m3cw7TS1j8=w1302-h331-no" />
 </p>
 
 <p align="center">
@@ -795,7 +795,7 @@ Figure 21. Z Height Data for 100 Points on a Grid.
 </p>
 
 <p align="center">
-![alt text](https://lh3.googleusercontent.com/jYFgeLDZxQupTLY0RsMlofJnt3mDGpxUweh-jjKnCuPlLirpU-ULvtr30tFdurcMoT03Ol1zpzygaDSSMQWTNtJemljG_Y6JrOrFhWb_UHqYgy4aiC5Qtjt-0srUbxaXRHKoPP3MuMLXa8unzA1ATd3ezrZso9t7E2q2CA5SgKpHz7-8fzqW3jIRcsBGH5k4se1qiYmJbZaDZglaTMoV-iDXZnxmM5WK74sgqcG0iEYKIUi69ONYPUaA_EOYXlNojgfy_bzPkXtFYa8Q4Awi0DUwbhV56ZBnh5ULH71UZmnITcjNjsW-Y2qyvUBoudH_RGTJWxpo6bSPQ_3d_fcGlem4h7CtmUfb3OUOyvyXVSg5tORes-qMtF3WdfJAN3o4cWxauMDD6GLssU_PWxIrt9ovatMD2IP0TxkShlhhBGtLDVOzYnIhiFvIZr1XYitJQX7LK1g3d0DQwEsVt0TuxD3oBpvsh5JdRrk9uTr9h_ToyUifyfEVHAed518TKPkpflG9QNwUS1Bx7ZjNiutlD3ncrZd1npgjmwgR_vw_q-JDX548gLxaJuSMQ8ES4J_sf1PjJfOeLDSywur7u7XkrrYH28JOgHkWBHE_i3E4OuEG0KaF-0-lUPUvLBw69JH_bF8qgwpRd4NrLgtHdfV7u1pxZCovnFk6oUY=w974-h501-no "Generated in Excel")
+<img src="https://lh3.googleusercontent.com/jYFgeLDZxQupTLY0RsMlofJnt3mDGpxUweh-jjKnCuPlLirpU-ULvtr30tFdurcMoT03Ol1zpzygaDSSMQWTNtJemljG_Y6JrOrFhWb_UHqYgy4aiC5Qtjt-0srUbxaXRHKoPP3MuMLXa8unzA1ATd3ezrZso9t7E2q2CA5SgKpHz7-8fzqW3jIRcsBGH5k4se1qiYmJbZaDZglaTMoV-iDXZnxmM5WK74sgqcG0iEYKIUi69ONYPUaA_EOYXlNojgfy_bzPkXtFYa8Q4Awi0DUwbhV56ZBnh5ULH71UZmnITcjNjsW-Y2qyvUBoudH_RGTJWxpo6bSPQ_3d_fcGlem4h7CtmUfb3OUOyvyXVSg5tORes-qMtF3WdfJAN3o4cWxauMDD6GLssU_PWxIrt9ovatMD2IP0TxkShlhhBGtLDVOzYnIhiFvIZr1XYitJQX7LK1g3d0DQwEsVt0TuxD3oBpvsh5JdRrk9uTr9h_ToyUifyfEVHAed518TKPkpflG9QNwUS1Bx7ZjNiutlD3ncrZd1npgjmwgR_vw_q-JDX548gLxaJuSMQ8ES4J_sf1PjJfOeLDSywur7u7XkrrYH28JOgHkWBHE_i3E4OuEG0KaF-0-lUPUvLBw69JH_bF8qgwpRd4NrLgtHdfV7u1pxZCovnFk6oUY=w974-h501-no" />
 </p>
 
 <p align="center">
