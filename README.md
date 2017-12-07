@@ -150,7 +150,6 @@ XModem is a serial file transfer protocol developed and used in the late 1900s, 
 
 ### Standard
 
-<div align="center">
 |Sender|Direction|Reciever|
 |-|:-:|-:|
 |Waiting for NAK|&larr;|NAK|
@@ -164,7 +163,6 @@ XModem is a serial file transfer protocol developed and used in the late 1900s, 
 |Waiting for ACK|&larr;|ACK|
 |EOT|&rarr;|Waiting for packet|
 |Finished||Remove SUB characters and build the file|
-</div>
 
 <p align="center">
 Figure 7. Table of XModem Interactions.
@@ -173,13 +171,11 @@ Figure 7. Table of XModem Interactions.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 In this protocol, the sender waits for a trigger from the receiver. Generally it will wait for a trigger for a set period and then timeout. Upon receiving the trigger the sender starts to transmit packets and for every packet it waits for an acknowledgement from the receiver. If the acknowledgement is not received or a no-acknowledgement is received the sender will resend the packet. Most implementations have a limit for number of consecutive resends after with the transmission will fail. If the sender receives an acknowledgement it sends the next packet. When done, the sender can issue an end of transmission.
 
-<p align="center">
 |Bytes|1 byte|1 byte|1 byte|128 bytes|1 byte|
 |:-:|:-:|:-:|:-:|:-:|:-:|
 |**Label**|Start|Block Number|Block Negative|Data|Checksum|
 |**Characters in ASCII**|SOH or 1 or 0x01|0 – 255 or 0x00 – 0xFF|0 – 255 or 0x00 – 0xFF|N/A|N/A|
 |**Purpose**|Indicates start of packet. Probably used to deal with noise during no transmissions.|Number of the packet.|255 minus the number of the packet.|File data.|Sum of all data bytes modulus 256.|
-</p>
 
 <p align="center">
 Figure 8. Table of XModem Packet Components.
@@ -212,7 +208,6 @@ Use the figures below for configaration of the CNC Controller.
 Figure 9. Image of I/O Settings Menu on a Haas CC.
 </p>
 
-<p align="center">
 |Setting Number|Setting Label|Setting Value|Purpose|
 |:-:|:-:|:-:|:-:|
 |11|BAUD RATE SELECT|115200|Any baud rate can but I recommend going with fastest preset. cfsetispeed() and cfsetospeed() has to be used on the PC for setting different baud rates.|
@@ -222,7 +217,6 @@ Figure 9. Image of I/O Settings Menu on a Haas CC.
 |37|RS-232 DATA BITS|8|No reason to change this.|
 |24|LEADER TO PUNCH|NONE|I would love to know why this setting is there.|
 |25|EOB PATTERN|LF ONLY|I discussed this above but stick to this setting.|
-</p>
 
 <p align="center">
 Figure 10. Table of Settings to use.
@@ -295,16 +289,16 @@ int cncOpen(char* dev, speed_t baud) {
 
 	/** Set Specific Config **/
 	port.c_cflag = (port.c_cflag & ~CSIZE) | CS8;
-    port.c_iflag &= ~IGNBRK;         
-    port.c_lflag = 0;        
-    port.c_oflag = 0; 
-    port.c_cc[VMIN]  = 1;  
-    port.c_cc[VTIME] = 5;
-    port.c_iflag &= ~(IXON | IXOFF | IXANY);
-    port.c_cflag |= (CLOCAL | CREAD);
-    port.c_cflag &= ~(PARENB | PARODD);
-    port.c_cflag &= ~CSTOPB;
-    port.c_cflag &= ~CRTSCTS;
+    	port.c_iflag &= ~IGNBRK;         
+    	port.c_lflag = 0;        
+    	port.c_oflag = 0; 
+    	port.c_cc[VMIN]  = 1;  
+    	port.c_cc[VTIME] = 5;
+    	port.c_iflag &= ~(IXON | IXOFF | IXANY);
+    	port.c_cflag |= (CLOCAL | CREAD);
+    	port.c_cflag &= ~(PARENB | PARODD);
+    	port.c_cflag &= ~CSTOPB;
+    	port.c_cflag &= ~CRTSCTS;
 
 	// Apply Config
 	tcsetattr(fd, TCSANOW, &port);
