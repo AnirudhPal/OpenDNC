@@ -9,9 +9,13 @@ To provide some context to this document here is a list of definitions of common
 
 ### CNC
 
+<p align="center">
 ![alt text](https://www.haascnc.com/content/dam/haascnc/machines/vertical-mills/vf-series/models/small/vf-2ss/assets/VF2ss_RC_HERO.png/jcr:content/renditions/original.png "Obtained from Haas Automation")
+</p>
 
+<p align="center">
 Figure 1. Image of Haas VF2 Super Speed CNC mill.
+</p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 CNC is the acronym for computer numerical control which is used to refer to machines that are actuated by a computer executing a set of commands. Some common examples of such machines are shown above in figure 1. These machines form the basis of industrial automation and are now being introduced in the offices, schools and homes in form of 3D printers, mills and lathes. 
@@ -19,12 +23,12 @@ CNC is the acronym for computer numerical control which is used to refer to mach
 ### Mill
 
 <p align="center">
-<img src="https://copperberg.com/wp-content/uploads/2016/09/ab83d719b659a6ba_org-700x466.jpg" />
+![alt text](https://copperberg.com/wp-content/uploads/2016/09/ab83d719b659a6ba_org-700x466.jpg "Obtained from Sandvik Coromant")
 </p>
 
-<center>
+<p align="center">
 Figure 2. Image of Sankvik Shell Mill milling through cast iron alloy.
-</center>
+</p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 In this context, a mill refers to a machine that has a rotating bit that is capable of moving/cutting independently on the three Cartesian axes. These machines are used for subtractive manufacturing by reducing a stock piece into a usable part. Although mills can be manual, we will focus on the CNC variant.
@@ -36,21 +40,21 @@ Haas Automation Incorporated is an American CNC manufacturer. All the testing an
 
 ### Classic Control and Next Generation Control
 
-<center>
+<p align="center">
 ![alt text](https://service.haascnc.com/sites/default/files/Locked/3/Clear_offsets.jpg "Obtained from Haas Automation")
-</center>
+</p>
 
-<center>
+<p align="center">
 Figure 3. Image of Haas Classic Control in the work offsets menu.
-</center>
+</p>
 
-<center>
+<p align="center">
 ![alt text](https://int.haascnc.com/images/whatsnew/NextGen-VPS1-lg_1033.jpg "Obtained from Haas Automation")
-</center>
+</p>
 
-<center>
+<p align="center">
 Figure 4. Image of Haas Next Generation Control in the VPS face milling menu.
-</center>
+</p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Haas like many CNC manufacturers have a separate range of controllers for their machines. These controllers are paired with a CNC to provide the operator with a UI to interact with the machine. They currently have two variants; the Classic Control (CC) and the Next Generation Control (NGC). These two controls have different feature sets and some portions of my findings only apply to one of these controllers. In sections where this is true I will explicitly state which controller is under consideration. For context figure 3 shows a menu in both the controllers.
@@ -72,9 +76,9 @@ G0 G90 G53 Z0 M05;
 M01 ( END VPS ENGRAVING );
 ```
 
-<center>
+<p align="center">
 Figure 5. G-Code generated on Haas NGC that performs and Engraving cycle.
-</center>
+</p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 G-Code is a programming language that is commonly used in CNC Machines as stated in the definition of CNC. G-Code has variations based on machine being used and the manufacturer, so a code used in one machine is not always compatible with a machine of different make. I will cover small portions of G-Code when it is important for presenting my case. In figure 4, we can see a G-Code program that engraves a metal surface. G-Code source files have the extension *.nc. As a side note; 3D printers support a stripped-down version of G-Code and their source files have the extension *.gcode.
@@ -96,13 +100,13 @@ Most might know what RS232 Serial is, but for people my age RS232 is a serial co
 
 ### Probing
 
-<center>
+<p align="center">
 ![alt text](http://resources.renishaw.com/gen/download/omp60--34686 "Obtained from Reinshaw PLC")
-</center>
+</p>
 
-<center>
+<p align="center">
 Figure 6. Image of Reinshaw OMP60 Touch Triger Probe.
-</center>
+</p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Probing in a CNC machine is the process of locating an object inside of the CNC machine. This is so that G-Code can be written with reference to an origin on the part being machined. There are several probing techniques and instruments but in this case, I used an Electronic Touch Trigger Probe, the TP7M from Renishaw PLC with a ceramic stem and a ruby tip. It has an accuracy of up to 0.00002in. 
@@ -146,7 +150,7 @@ XModem is a serial file transfer protocol developed and used in the late 1900s, 
 
 ### Standard
 
-<center>
+<p align="center">
 |Sender|Direction|Reciever|
 |-|:-:|-:|
 |Waiting for NAK|&larr;|NAK|
@@ -160,26 +164,26 @@ XModem is a serial file transfer protocol developed and used in the late 1900s, 
 |Waiting for ACK|&larr;|ACK|
 |EOT|&rarr;|Waiting for packet|
 |Finished||Remove SUB characters and build the file|
-</center>
+</p>
 
-<center>
+<p align="center">
 Figure 7. Table of XModem Interactions.
-</center>
+</p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 In this protocol, the sender waits for a trigger from the receiver. Generally it will wait for a trigger for a set period and then timeout. Upon receiving the trigger the sender starts to transmit packets and for every packet it waits for an acknowledgement from the receiver. If the acknowledgement is not received or a no-acknowledgement is received the sender will resend the packet. Most implementations have a limit for number of consecutive resends after with the transmission will fail. If the sender receives an acknowledgement it sends the next packet. When done, the sender can issue an end of transmission.
 
-<center>
+<p align="center">
 |Bytes|1 byte|1 byte|1 byte|128 bytes|1 byte|
 |:-:|:-:|:-:|:-:|:-:|:-:|
 |**Label**|Start|Block Number|Block Negative|Data|Checksum|
 |**Characters in ASCII**|SOH or 1 or 0x01|0 – 255 or 0x00 – 0xFF|0 – 255 or 0x00 – 0xFF|N/A|N/A|
 |**Purpose**|Indicates start of packet. Probably used to deal with noise during no transmissions.|Number of the packet.|255 minus the number of the packet.|File data.|Sum of all data bytes modulus 256.|
-</center>
+</p>
 
-<center>
+<p align="center">
 Figure 8. Table of XModem Packet Components.
-</center>
+</p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 The packet consists of the following:
@@ -200,15 +204,15 @@ One of the peculiar attributes to consider while working with XModem on a Haas C
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Use the figures below for configaration of the CNC Controller.
 
-<center>
+<p align="center">
 ![alt text](https://diy.haascnc.com/sites/default/files/Locked/2/modem-sttngs.jpg "Obtained from Haas Automation")
-</center>
+</p>
 
-<center>
+<p align="center">
 Figure 9. Image of I/O Settings Menu on a Haas CC.
-</center>
+</p>
 
-<center>
+<p align="center">
 |Setting Number|Setting Label|Setting Value|Purpose|
 |:-:|:-:|:-:|:-:|
 |11|BAUD RATE SELECT|115200|Any baud rate can but I recommend going with fastest preset. cfsetispeed() and cfsetospeed() has to be used on the PC for setting different baud rates.|
@@ -218,11 +222,11 @@ Figure 9. Image of I/O Settings Menu on a Haas CC.
 |37|RS-232 DATA BITS|8|No reason to change this.|
 |24|LEADER TO PUNCH|NONE|I would love to know why this setting is there.|
 |25|EOB PATTERN|LF ONLY|I discussed this above but stick to this setting.|
-</center>
+</p>
 
-<center>
+<p align="center">
 Figure 10. Table of Settings to use.
-</center>
+</p>
 
 ## CNC Serial
 
@@ -237,9 +241,9 @@ Figure 10. Table of Settings to use.
 #include <string.h>			// String Manipulation
 ```
 
-<center>
+<p align="center">
 Figure 11. Importing all Neccessary Libs.
-</center>
+</p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Most of them are standard libraries that are used in almost all C files but the intresting one is termios.h. A brief description about this can be found in a later section. It is used to configure the Serial Port so we can interact with it through a file descriptor.
@@ -252,9 +256,9 @@ Most of them are standard libraries that are used in almost all C files but the 
 #define EOT	0x04			// End of Transmission
 ```
 
-<center>
+<p align="center">
 Figure 12. Defining usefull Constants.
-</center>
+</p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 These are some of the common ASCII characters used during XModem file transfer.
@@ -269,9 +273,9 @@ void cncGetXM(int fd, int file);					// Recieve File
 const int CREATE = O_WRONLY | O_CREAT | O_TRUNC;	// Create a File
 ```
 
-<center>
+<p align="center">
 Figure 13. Global Variable declaration. 
-</center>
+</p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 The variable *port* is used to store the configurations for the serial port. *BAUD* sets the rate of serial communication. The function declaration are there to avoid warnings during compilation. 
@@ -310,9 +314,9 @@ int cncOpen(char* dev, speed_t baud) {
 }
 ```
 
-<center>
+<p align="center">
 Figure 14. Function to Open Serial Port. 
-</center>
+</p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 The function recieves a filepath corresponding to the connected serial device and a baud rate. It opens the filepath and aquire it current configuration using *tcgetattr()*. Then it sets the baud rate for both input and output by using functions *cfsetispeed()* and *cfsetospeed()*. After that the function sets up the control flags. Details about the control flag are a little complicated and can be looked up in the man pages. They are set through bitwise operations. Finally the configuration changes are applied using *tcsetattr()* and a file descriptor is returned.
@@ -387,9 +391,9 @@ void cncSendXM(int fd, int file) {
 }
 ```
 
-<center>
+<p align="center">
 Figure 15. Function to Send a File. 
-</center>
+</p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 The functions starts by waiting for a NAK from the device. After that it enters a loop that only breaks when the entire file has been parsed and sent. It builds each packet by aquiring the data from the file. It also pads with SUB when the file is completely read. Then it adds start, block number, block negative and checksum. This packet is sent to the device. Once completed it send EOT message to the device. This function needs to be extended to handle errors but should work for the most part. 
@@ -454,9 +458,9 @@ void cncGetXM(int fd, int file) {
 }
 ```
 
-<center>
+<p align="center">
 Figure 16. Function to Recieve a File. 
-</center>
+</p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 To get a file the function starts by broadcasting a NAK. It allocates a buffer that is used repeatedly by each packet. It then enters a loop that only exits upon recieving an EOT from the device. The first thingit does is clearing the buffer. Then it waits for a SOH. After this it fills the buffer. Looping instead of filling the buffer at once gives the device enough time to transmit the entire packet. Then the packet is stripped down into its componenets and checked for errors. If an error occurs the same packet is requested with a NAK command. If not the data is added to the file and an ACK sent to the device. This function needs to be extended to handle errors but should work for the most part.
@@ -691,17 +695,17 @@ void constructFile(File fd) {
 }
 ```
 
-<center>
+<p align="center">
 Figure 17. Arduino Source used for testing and emulation. 
-</center>
+</p>
 
-<center>
+<p align="center">
 ![alt text](https://cdn-learn.adafruit.com/assets/assets/000/009/892/medium800/adafruit_products_microsdwiring.jpg?1396899097 "Obtained from Adafruit Industries")
-</center>
+</p>
 
-<center>
+<p align="center">
 Figure 18. Wiring the SD card to the Arduino. 
-</center>
+</p>
 
 ## DPrint
 
@@ -743,9 +747,9 @@ DPRNT[#5223[44]];
 G00 G91 X.5;
 ```
 
-<center>
+<p align="center">
 Figure 19. Snippet of Custom Grid Probing Cycle. 
-</center>
+</p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 The above is a snippet of the G-Code that was used to achieve this. I have deliberately chosen not to include the entire code. This is because the probe is often the most expensive component of a CNC machine, and running this code without understanding it can be dangerous and quite expensive if anything goes wrong. I encourage further research before attempting to perform this yourself. Also, you can always contact me for more information.
@@ -773,30 +777,30 @@ void cncDPrint(int fd) {
 }
 ```
 
-<center>
+<p align="center">
 Figure 20. DPrint function for CNC Serial. 
-</center>
+</p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 The following function can be added to CNC Serial so you can read DPrint statements. All you do is read a large block and then allocate memory for whatever you were able to read. The *read()* function returns the number of bytes it actually read from the port.
 
 ### Data
 
-<center>
+<p align="center">
 ![alt text](https://lh3.googleusercontent.com/mKYUa2aEQbfTDs6Sfg-Z5saCgmmlDar9s0eFThNVS_-3DX2GJCFxGjBcUTp0cmbipWw7BWh2PDWlQnIQVzTvNUxuQMdB4jSIliP3Lj4QxAdAYBOnp4qU-dYf7Raymy7A5qMVzElGh4IpP_RDtYEnnmM6HaSjSJkxD_v-B2YRm75PL5yOh8_bztkoMsRo2nlj7wHypYKckAtU8hi2QG8IcQZRg7Z3W_UeQ5M4CKxaGmzqLQX1iJeQjeUTXHuYXjkGEXuj57s4ZFgx8oCTfRVuTCNdNE2-2QyKBm-GwFvX4pdfI5OB-tukzc62IaPsWkdK660pY8fDSunP2O45vbAToz7QMOugP_VatAMKQd2jR0HayV_DGgVtnCQcT4vk6QUu6befrEG4I087Rhugl9ejBii-rxoWKkABk7d_R_KT9a76kJwFmakFPIdiZaj-rYGuEVtUqyOQ1jL-DJc2njj4xHK4ZcyFZWFXE_ebe4oUO5I1P0-leWDJ6EOUysc0YcXBqfSWwiV8y41-Bap52JzpGjgHeBXpgaQTSsTpDNpnlvVd9bHZzsR3Vbvdfm6suTFKnp21wJ6941-BfZqaOdfB61WJcljPufnp81BZOQK4Qh1le2xojDbfm8QeiW0ZuKMHskBus27qwK7XmPWTlGbBw-Jb6m3cw7TS1j8=w1302-h331-no "Data Obtained from DT1 and Telescope Primary Blank")
-</center>
+</p>
 
-<center>
+<p align="center">
 Figure 21. Z Height Data for 100 Points on a Grid.
-</center>
+</p>
 
-<center>
+<p align="center">
 ![alt text](https://lh3.googleusercontent.com/jYFgeLDZxQupTLY0RsMlofJnt3mDGpxUweh-jjKnCuPlLirpU-ULvtr30tFdurcMoT03Ol1zpzygaDSSMQWTNtJemljG_Y6JrOrFhWb_UHqYgy4aiC5Qtjt-0srUbxaXRHKoPP3MuMLXa8unzA1ATd3ezrZso9t7E2q2CA5SgKpHz7-8fzqW3jIRcsBGH5k4se1qiYmJbZaDZglaTMoV-iDXZnxmM5WK74sgqcG0iEYKIUi69ONYPUaA_EOYXlNojgfy_bzPkXtFYa8Q4Awi0DUwbhV56ZBnh5ULH71UZmnITcjNjsW-Y2qyvUBoudH_RGTJWxpo6bSPQ_3d_fcGlem4h7CtmUfb3OUOyvyXVSg5tORes-qMtF3WdfJAN3o4cWxauMDD6GLssU_PWxIrt9ovatMD2IP0TxkShlhhBGtLDVOzYnIhiFvIZr1XYitJQX7LK1g3d0DQwEsVt0TuxD3oBpvsh5JdRrk9uTr9h_ToyUifyfEVHAed518TKPkpflG9QNwUS1Bx7ZjNiutlD3ncrZd1npgjmwgR_vw_q-JDX548gLxaJuSMQ8ES4J_sf1PjJfOeLDSywur7u7XkrrYH28JOgHkWBHE_i3E4OuEG0KaF-0-lUPUvLBw69JH_bF8qgwpRd4NrLgtHdfV7u1pxZCovnFk6oUY=w974-h501-no "Generated in Excel")
-</center>
+</p>
 
-<center>
+<p align="center">
 Figure 22. Surface Graph of the above Data. 
-</center>
+</p>
 
 ## Networking
 
