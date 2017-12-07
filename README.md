@@ -16,48 +16,48 @@
 	* [*Macros*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#macros)
 	* [*Macro Variables*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#macro-variables)
     
-2. **Objectives**
+2. [**Objectives**](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#objectives)
 
-	* *Open Source DNC*
-	* *Creative Applications*
-	* *Deeper Understanding*
+	* [*Open Source DNC*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#open-source-dnc)
+	* [*Creative Applications*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#creative-applications)
+	* [*Deeper Understanding*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#deeper-understanding)
 
-3. **XModem**
+3. [**XModem**](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#xmodem)
 	
-	* *Standard*
-	* *Properties*
-	* *Setup on CNC*
+	* [*Standard*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#standard)
+	* [*Properties*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#properties)
+	* [*Setup on CNC*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#setup-on-cnc)
     
-4. **CNC Serial**
+4. [**CNC Serial**](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#cnc-serial)
 
-	* *Code*
-	* *Termios.h*
-	* *Control Flags*
-	* *Arduino Testing*
+	* [*Code*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#code)
+	* [*Termios.h*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#termios-h)
+	* [*Control Flags*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#control-flags)
+	* [*Arduino Testing*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#arduino-testing)
 
-5. **DPrint**
+5. [**DPrint**](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#dprint)
 
-	* *Loose Standard*
-	* *Hass Specific*
-		* Syntax
-		* Example
+	* [*Loose Standard*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#loose-standard)
+	* [*Hass Specific*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#haas-specific)
+		* [Syntax](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#syntax)
+		* [Example](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#example)
 
-6. **Surface Model**
+6. [**Surface Model**](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#surface-model)
 
-	* *Procedure*
-	* *G65 / G54 / G00 / G91*
-	* *Snippet*
-	* *Data*
+	* [*Procedure*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#procedure)
+	* [*G65 / G54 / G00 / G91*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#)
+	* [*Snippet*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#snippet)
+	* [*Data*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#data)
 
-7. **Networking**
+7. [**Networking**](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#networking)
 
-	* *Setup*
-	* *Local*
-	* *Remote*
-	* *Hybrid*
+	* [*Setup*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#setup)
+	* [*Local*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#local)
+	* [*Remote*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#remote)
+	* [*Hybrid*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#hybrid)
 
-8. **Refrences**
-9. **Contact Information**
+8. [**Refrences**](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#refrences)
+9. [**Contact Information**](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#contact-information)
 
 ## Definitions
 
