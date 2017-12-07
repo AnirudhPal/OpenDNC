@@ -11,18 +11,14 @@ To provide some context to this document here is a list of definitions of common
 
 ![alt text](https://www.haascnc.com/content/dam/haascnc/machines/vertical-mills/vf-series/models/small/vf-2ss/assets/VF2ss_RC_HERO.png/jcr:content/renditions/original.png "Obtained from Haas Automation")
 
-<center>
 Figure 1. Image of Haas VF2 Super Speed CNC mill.
-</center>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 CNC is the acronym for computer numerical control which is used to refer to machines that are actuated by a computer executing a set of commands. Some common examples of such machines are shown above in figure 1. These machines form the basis of industrial automation and are now being introduced in the offices, schools and homes in form of 3D printers, mills and lathes. 
 
 ### Mill
 
-<center>
 ![alt text](https://copperberg.com/wp-content/uploads/2016/09/ab83d719b659a6ba_org-700x466.jpg "Obtained from Sandvik Coromant")
-</center>
 
 <center>
 Figure 2. Image of Sankvik Shell Mill milling through cast iron alloy.
