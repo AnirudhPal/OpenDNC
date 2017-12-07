@@ -31,7 +31,7 @@
 4. [**CNC Serial**](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#cnc-serial)
 
 	* [*Code*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#code)
-	* [*Termios.h*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#termios-h)
+	* [*Termios.h*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#termiosh)
 	* [*Control Flags*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#control-flags)
 	* [*Arduino Testing*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#arduino-testing)
 
@@ -45,7 +45,7 @@
 6. [**Surface Model**](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#surface-model)
 
 	* [*Procedure*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#procedure)
-	* [*G65 / G54 / G00 / G91*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#)
+	* [*G65 / G54 / G00 / G91*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#g65--g54--g00--g91)
 	* [*Snippet*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#snippet)
 	* [*Data*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#data)
 
