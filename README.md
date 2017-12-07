@@ -288,7 +288,7 @@ Figure 10. Table of Settings to use.
 #include <stdio.h>			// Standard I/O
 #include <fcntl.h>			// Open
 #include <unistd.h>			// Close
-#include <termios.h>		// Serial Coms
+#include <termios.h>			// Serial Coms
 #include <string.h>			// String Manipulation
 ```
 
@@ -316,11 +316,11 @@ These are some of the common ASCII characters used during XModem file transfer.
 
 ```c
 /** Global Var **/
-struct termios port;								// Configure Var
-speed_t BAUD = B115200;								// Baud Rate
-int cncOpen(char* dev, speed_t baud);				// Used to Open CNC Port
-void cncSendXM(int fd, int file);					// Sends File
-void cncGetXM(int fd, int file);					// Recieve File
+struct termios port;					// Configure Var
+speed_t BAUD = B115200;					// Baud Rate
+int cncOpen(char* dev, speed_t baud);			// Used to Open CNC Port
+void cncSendXM(int fd, int file);			// Sends File
+void cncGetXM(int fd, int file);			// Recieve File
 const int CREATE = O_WRONLY | O_CREAT | O_TRUNC;	// Create a File
 ```
 
