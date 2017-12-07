@@ -4,17 +4,17 @@
 
 1. [**Definitions**](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#definitions)
 
-	* *CNC*
-	* *Mill*
-	* *Haas*
-	* *Classic Control and Next Generation Control*
-	* *G-Code*
-	* *MDI, MEM, DNC and FNC*
-	* *RS232*
-	* *Probing*
-	* *WIPS*
-	* *Macros*
-	* *Macro Variables*
+	* [*CNC*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#cnc)
+	* [*Mill*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#mill)
+	* [*Haas*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#haas)
+	* [*Classic Control and Next Generation Control*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#classic-control-and-next-generation-control)
+	* [*G-Code*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#g-code)
+	* [*MDI, MEM, DNC and FNC*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#)
+	* [*RS232*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#)
+	* [*Probing*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#)
+	* [*WIPS*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#)
+	* [*Macros*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#)
+	* [*Macro Variables*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#)
     
 2. **Objectives**
 
