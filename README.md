@@ -18,7 +18,7 @@ CNC is the acronym for computer numerical control which is used to refer to mach
 
 ### Mill
 
-![alt text](https://copperberg.com/wp-content/uploads/2016/09/ab83d719b659a6ba_org-700x466.jpg "Obtained from Sandvik Coromant")
+<img src="https://copperberg.com/wp-content/uploads/2016/09/ab83d719b659a6ba_org-700x466.jpg" align="middle"/>
 
 <center>
 Figure 2. Image of Sankvik Shell Mill milling through cast iron alloy.
