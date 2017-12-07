@@ -2,7 +2,7 @@
 
 ## Index
 
-1. **Definitions**
+1. [**Definitions**](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#definitions)
 
 	* *CNC*
 	* *Mill*
