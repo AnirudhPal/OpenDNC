@@ -150,7 +150,7 @@ XModem is a serial file transfer protocol developed and used in the late 1900s, 
 
 ### Standard
 
-<center>
+<div align="center">
 |Sender|Direction|Reciever|
 |-|:-:|-:|
 |Waiting for NAK|&larr;|NAK|
@@ -164,7 +164,7 @@ XModem is a serial file transfer protocol developed and used in the late 1900s, 
 |Waiting for ACK|&larr;|ACK|
 |EOT|&rarr;|Waiting for packet|
 |Finished||Remove SUB characters and build the file|
-</center>
+</div>
 
 <p align="center">
 Figure 7. Table of XModem Interactions.
