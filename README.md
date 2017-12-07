@@ -2,6 +2,63 @@
 
 ## Index
 
+1. **Definitions**
+
+	* *CNC*
+	* *Mill*
+	* *Haas*
+	* *Classic Control and Next Generation Control*
+	* *G-Code*
+	* *MDI, MEM, DNC and FNC*
+	* *RS232*
+	* *Probing*
+	* *WIPS*
+	* *Macros*
+	* *Macro Variables*
+    
+2. **Objectives**
+
+	* *Open Source DNC*
+	* *Creative Applications*
+	* *Deeper Understanding*
+
+3. **XModem**
+	
+	* *Standard*
+	* *Properties*
+	* *Setup on CNC*
+    
+4. **CNC Serial**
+
+	* *Code*
+	* *Termios.h*
+	* *Control Flags*
+	* *Arduino Testing*
+
+5. **DPrint**
+
+	* *Loose Standard*
+	* *Hass Specific*
+		* Syntax
+		* Example
+
+6. **Surface Model**
+
+	* *Procedure*
+	* *G65 / G54 / G00 / G91*
+	* *Snippet*
+	* *Data*
+
+7. **Networking**
+
+	* *Setup*
+	* *Local*
+	* *Remote*
+	* *Hybrid*
+
+8. **Refrences**
+9. **Contact Information**
+
 ## Definitions
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
