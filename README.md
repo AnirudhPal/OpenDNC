@@ -9,12 +9,12 @@
 	* [*Haas*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#haas)
 	* [*Classic Control and Next Generation Control*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#classic-control-and-next-generation-control)
 	* [*G-Code*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#g-code)
-	* [*MDI, MEM, DNC and FNC*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#)
-	* [*RS232*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#)
-	* [*Probing*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#)
-	* [*WIPS*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#)
-	* [*Macros*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#)
-	* [*Macro Variables*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#)
+	* [*MDI, MEM, DNC and FNC*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#mdi-mem-dnc-and-fnc)
+	* [*RS232*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#rs232)
+	* [*Probing*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#probing)
+	* [*WIPS*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#wips)
+	* [*Macros*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#macros)
+	* [*Macro Variables*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#macro-variables)
     
 2. **Objectives**
 
