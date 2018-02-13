@@ -56,8 +56,9 @@
 	* [*Remote*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#remote)
 	* [*Hybrid*](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#hybrid)
 
-8. [**Refrences**](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#refrences)
-9. [**Contact Information**](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#contact-information)
+8. [**Appendix**](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#appendix)
+9. [**Refrences**](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#refrences)
+10. [**Contact Information**](https://github.com/AnirudhPal/OpenDNC/blob/master/README.md#contact-information)
 
 ## Definitions
 
@@ -873,7 +874,254 @@ Remote Net Share is another configuration in which you can mount an Samba Share 
 ### Hybrid
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Remote and Local Shares have pros and cons but the good thing is you can run both of them at the same time. You can design a system where files dropped onto the NAS will be pushed to all the CNC's local storage and at the end of the day removed and archived. Also files generated on the machine directly can also be sent to the NAS. The NAS and the machines can be isolated in a private subnet and a server can act as connection to the NAS to upload and download files from the rest of the network or the Internet. 
+Remote and Local Shares have pros and cons but the good thing is you can run both of them at the same time. You can design a system where files dropped onto the NAS will be pushed to all the CNC's local storage and at the end of the day removed and archived. Also files generated on the machine directly can also be sent to the NAS. The NAS and the machines can be isolated in a private subnet and a server can act as connection to the NAS to upload and download files from the rest of the network or the Internet.
+
+### Appendix
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The following blocks are the raw data of interaction between the CNC and Computer using a Serial Sniffer.
+
+```
+[30/10/2017 10:27:11] Written data (COM2)	
+    15                                                .               	
+[30/10/2017 10:27:21] Written data (COM2)	
+    15                                                .               	
+[30/10/2017 10:27:21] Read data (COM2)	
+    01 01 fe 0a 25 0a 4f 30 35 35 35 35 28 43 53 33   ..þ.%.O05555(CS3	
+    39 30 5f 54 65 73 74 5f 4e 43 29 0a 28 55 73 69   90_Test_NC).(Usi	
+    6e 67 20 47 30 20 77 68 69 63 68 20 74 72 61 76   ng G0 which trav	
+    65 6c 73 20 61 6c 6f 6e 67 20 64 6f 67 6c 65 67   els along dogleg	
+    20 70 61 74 68 2e 29 0a 28 54 31 20 44 3d 32 2e    path.).(T1 D=2.	
+    20 43 52 3d 30 2e 20 2d 20 5a 4d 49 4e 3d 2d 30    CR=0. - ZMIN=-0	
+    2e 31 32 35 20 2d 20 66 61 63 65 20 6d 69 6c 6c   .125 - face mill	
+    29 0a 28 54 33 20 44 3d 30 2e 35 20 43 52 3d 30   ).(T3 D=0.5 CR=0	
+    2e 20 2d 98                                       . -˜            	
+[30/10/2017 10:27:21] Written data (COM2)	
+    06                                                .               	
+[30/10/2017 10:27:21] Read data (COM2)	
+    01 02 fd 20 5a 4d 49 4e 3d 2d 31 2e 31 32 35 20   ..ý ZMIN=-1.125 	
+    2d 20 66 6c 61 74 20 65 6e 64 20 6d 69 6c 6c 29   - flat end mill)	
+    0a 4e 31 30 47 39 30 47 39 34 47 31 37 0a 4e 31   .N10G90G94G17.N1	
+    35 47 32 30 0a 4e 32 30 47 35 33 47 30 30 5a 30   5G20.N20G53G00Z0	
+    2e 0a 0a 28 46 61 63 65 33 29 0a 4e 33 30 54 31   ...(Face3).N30T1	
+    4d 30 36 0a 4e 33 35 53 36 35 30 30 4d 30 33 0a   M06.N35S6500M03.	
+    4e 34 30 47 35 34 0a 4e 34 35 4d 30 38 0a 4e 36   N40G54.N45M08.N6	
+    30 47 30 30 58 35 2e 36 37 35 59 30 2e 33 31 34   0G00X5.675Y0.314	
+    37 0a 4e 26                                       7.N&            	
+[30/10/2017 10:27:21] Written data (COM2)	
+    06                                                .               	
+[30/10/2017 10:27:21] Read data (COM2)	
+    01 03 fc 36 35 47 34 33 5a 31 2e 48 31 0a 4e 37   ..ü65G43Z1.H1.N7	
+    30 54 33 0a 4e 37 35 47 30 30 5a 30 2e 35 0a 4e   0T3.N75G00Z0.5.N	
+    38 30 47 30 31 5a 30 2e 31 37 35 46 36 35 2e 0a   80G01Z0.175F65..	
+    4e 38 35 47 31 38 47 30 33 58 35 2e 34 37 35 5a   N85G18G03X5.475Z	
+    2d 30 2e 30 32 35 49 2d 30 2e 32 4b 30 2e 0a 4e   -0.025I-0.2K0..N	
+    39 30 47 30 31 58 34 2e 33 37 35 0a 4e 39 35 58   90G01X4.375.N95X	
+    30 2e 0a 4e 31 30 30 47 31 37 47 30 32 59 31 2e   0..N100G17G02Y1.	
+    36 31 30 33 49 30 2e 4a 30 2e 36 34 37 38 0a 4e   6103I0.J0.6478.N	
+    31 30 35 41                                       105A            	
+[30/10/2017 10:27:21] Written data (COM2)	
+    06                                                .               	
+[30/10/2017 10:27:21] Read data (COM2)	
+    01 04 fb 47 30 31 58 34 2e 33 37 35 0a 4e 31 31   ..ûG01X4.375.N11	
+    30 47 30 33 59 32 2e 39 30 36 49 30 2e 4a 30 2e   0G03Y2.906I0.J0.	
+    36 34 37 38 0a 4e 31 31 35 47 30 31 58 30 2e 0a   6478.N115G01X0..	
+    4e 31 32 30 47 31 38 47 30 33 58 2d 30 2e 32 5a   N120G18G03X-0.2Z	
+    30 2e 31 37 35 49 30 2e 4b 30 2e 32 0a 4e 31 32   0.175I0.K0.2.N12	
+    35 47 30 30 5a 30 2e 35 0a 4e 31 33 30 58 2d 31   5G00Z0.5.N130X-1	
+    2e 33 59 30 2e 33 31 34 37 0a 4e 31 33 35 47 30   .3Y0.3147.N135G0	
+    31 5a 30 2e 31 32 35 46 36 35 2e 0a 4e 31 34 30   1Z0.125F65..N140	
+    47 30 32 fe                                       G02þ            	
+[30/10/2017 10:27:21] Written data (COM2)	
+    06                                                .               	
+[30/10/2017 10:27:21] Read data (COM2)	
+    01 05 fa 58 2d 31 2e 31 5a 2d 30 2e 30 37 35 49   ..úX-1.1Z-0.075I	
+    30 2e 32 4b 30 2e 0a 4e 31 34 35 47 30 31 58 30   0.2K0..N145G01X0	
+    2e 0a 4e 31 35 30 58 34 2e 33 37 35 0a 4e 31 35   ..N150X4.375.N15	
+    35 47 31 37 47 30 33 59 31 2e 36 31 30 33 49 30   5G17G03Y1.6103I0	
+    2e 4a 30 2e 36 34 37 38 0a 4e 31 36 30 47 30 31   .J0.6478.N160G01	
+    58 30 2e 0a 4e 31 36 35 47 30 32 59 32 2e 39 30   X0..N165G02Y2.90	
+    36 49 30 2e 4a 30 2e 36 34 37 38 0a 4e 31 37 30   6I0.J0.6478.N170	
+    47 30 31 58 34 2e 33 37 35 0a 4e 31 37 35 47 31   G01X4.375.N175G1	
+    38 47 30 1c                                       8G0.            	
+[30/10/2017 10:27:21] Written data (COM2)	
+    06                                                .               	
+[30/10/2017 10:27:21] Read data (COM2)	
+    01 06 f9 32 58 34 2e 35 37 35 5a 30 2e 31 32 35   ..ù2X4.575Z0.125	
+    49 30 2e 4b 30 2e 32 0a 4e 31 38 30 47 30 30 5a   I0.K0.2.N180G00Z	
+    30 2e 35 0a 4e 31 38 35 58 35 2e 36 37 35 59 30   0.5.N185X5.675Y0	
+    2e 33 31 34 37 0a 4e 31 39 30 47 30 31 5a 30 2e   .3147.N190G01Z0.	
+    30 37 35 46 36 35 2e 0a 4e 31 39 35 47 30 33 58   075F65..N195G03X	
+    35 2e 34 37 35 5a 2d 30 2e 31 32 35 49 2d 30 2e   5.475Z-0.125I-0.	
+    32 4b 30 2e 0a 4e 32 30 30 47 30 31 58 34 2e 33   2K0..N200G01X4.3	
+    37 35 0a 4e 32 30 35 58 30 2e 0a 4e 32 31 30 47   75.N205X0..N210G	
+    31 37 47 23                                       17G#            	
+[30/10/2017 10:27:21] Written data (COM2)	
+    06                                                .               	
+[30/10/2017 10:27:21] Read data (COM2)	
+    01 07 f8 30 32 59 31 2e 36 31 30 33 49 30 2e 4a   ..ø02Y1.6103I0.J	
+    30 2e 36 34 37 38 0a 4e 32 31 35 47 30 31 58 34   0.6478.N215G01X4	
+    2e 33 37 35 0a 4e 32 32 30 47 30 33 59 32 2e 39   .375.N220G03Y2.9	
+    30 36 49 30 2e 4a 30 2e 36 34 37 38 0a 4e 32 32   06I0.J0.6478.N22	
+    35 47 30 31 58 30 2e 0a 4e 32 33 30 47 31 38 47   5G01X0..N230G18G	
+    30 33 58 2d 30 2e 32 5a 30 2e 30 37 35 49 30 2e   03X-0.2Z0.075I0.	
+    4b 30 2e 32 0a 4e 32 33 35 47 30 30 5a 31 2e 0a   K0.2.N235G00Z1..	
+    4e 32 34 30 4d 30 35 0a 4e 32 34 35 47 35 33 47   N240M05.N245G53G	
+    30 30 5a 29                                       00Z)            	
+[30/10/2017 10:27:21] Written data (COM2)	
+    06                                                .               	
+[30/10/2017 10:27:21] Read data (COM2)	
+    01 08 f7 30 2e 0a 0a 4e 36 36 34 33 35 4d 30 35   ..÷0...N66435M05	
+    0a 4e 36 36 34 34 30 4d 30 39 0a 4e 36 36 34 34   .N66440M09.N6644	
+    35 47 35 33 47 30 30 5a 30 2e 0a 4e 36 36 34 35   5G53G00Z0..N6645	
+    35 58 32 2e 31 38 37 35 0a 4e 36 36 34 36 30 47   5X2.1875.N66460G	
+    35 33 59 30 2e 0a 4e 36 36 34 36 35 4d 33 30 0a   53Y0..N66465M30.	
+    0a 25 0a 1a 1a 1a 1a 1a 1a 1a 1a 1a 1a 1a 1a 1a   .%..............	
+    1a 1a 1a 1a 1a 1a 1a 1a 1a 1a 1a 1a 1a 1a 1a 1a   ................	
+    1a 1a 1a 1a 1a 1a 1a 1a 1a 1a 1a 1a 1a 1a 1a 1a   ................	
+    1a 1a 1a e4                                       ...ä            	
+[30/10/2017 10:27:21] Written data (COM2)	
+    06                                                .               	
+[30/10/2017 10:27:21] Read data (COM2)	
+    04                                                .               	
+[30/10/2017 10:27:21] Written data (COM2)	
+    06                                                .               	
+```
+
+<p align="center">
+Figure 23. CNC to PC
+</p>
+
+``` 
+[30/10/2017 10:32:35] Read data (COM2)	
+    15                                                .               	
+[30/10/2017 10:32:37] Read data (COM2)	
+    15 15                                             ..              	
+[30/10/2017 10:32:37] Written data (COM2)	
+    01 01 fe 0a 25 0a 4f 30 35 35 35 35 28 43 53 33   ..þ.%.O05555(CS3	
+    39 30 5f 54 65 73 74 5f 4e 43 29 0a 28 55 73 69   90_Test_NC).(Usi	
+    6e 67 20 47 30 20 77 68 69 63 68 20 74 72 61 76   ng G0 which trav	
+    65 6c 73 20 61 6c 6f 6e 67 20 64 6f 67 6c 65 67   els along dogleg	
+    20 70 61 74 68 2e 29 0a 28 54 31 20 44 3d 32 2e    path.).(T1 D=2.	
+    20 43 52 3d 30 2e 20 2d 20 5a 4d 49 4e 3d 2d 30    CR=0. - ZMIN=-0	
+    2e 31 32 35 20 2d 20 66 61 63 65 20 6d 69 6c 6c   .125 - face mill	
+    29 0a 28 54 33 20 44 3d 30 2e 35 20 43 52 3d 30   ).(T3 D=0.5 CR=0	
+    2e 20 2d 98 01 01 fe 0a 25 0a 4f 30 35 35 35 35   . -˜..þ.%.O05555	
+    28 43 53 33 39 30 5f 54 65 73 74 5f 4e 43 29 0a   (CS390_Test_NC).	
+    28 55 73 69 6e 67 20 47 30 20 77 68 69 63 68 20   (Using G0 which 	
+    74 72 61 76 65 6c 73 20 61 6c 6f 6e 67 20 64 6f   travels along do	
+    67 6c 65 67 20 70 61 74 68 2e 29 0a 28 54 31 20   gleg path.).(T1 	
+    44 3d 32 2e 20 43 52 3d 30 2e 20 2d 20 5a 4d 49   D=2. CR=0. - ZMI	
+    4e 3d 2d 30 2e 31 32 35 20 2d 20 66 61 63 65 20   N=-0.125 - face 	
+    6d 69 6c 6c 29 0a 28 54 33 20 44 3d 30 2e 35 20   mill).(T3 D=0.5 	
+    43 52 3d 30 2e 20 2d 98                           CR=0. -˜        	
+[30/10/2017 10:32:37] Read data (COM2)	
+    06                                                .               	
+[30/10/2017 10:32:37] Written data (COM2)	
+    01 02 fd 20 5a 4d 49 4e 3d 2d 31 2e 31 32 35 20   ..ý ZMIN=-1.125 	
+    2d 20 66 6c 61 74 20 65 6e 64 20 6d 69 6c 6c 29   - flat end mill)	
+    0a 4e 31 30 47 39 30 47 39 34 47 31 37 0a 4e 31   .N10G90G94G17.N1	
+    35 47 32 30 0a 4e 32 30 47 35 33 47 30 30 5a 30   5G20.N20G53G00Z0	
+    2e 0a 0a 28 46 61 63 65 33 29 0a 4e 33 30 54 31   ...(Face3).N30T1	
+    4d 30 36 0a 4e 33 35 53 36 35 30 30 4d 30 33 0a   M06.N35S6500M03.	
+    4e 34 30 47 35 34 0a 4e 34 35 4d 30 38 0a 4e 36   N40G54.N45M08.N6	
+    30 47 30 30 58 35 2e 36 37 35 59 30 2e 33 31 34   0G00X5.675Y0.314	
+    37 0a 4e 26                                       7.N&            	
+[30/10/2017 10:32:38] Read data (COM2)	
+    15                                                .               	
+[30/10/2017 10:32:38] Written data (COM2)	
+    01 02 fd 20 5a 4d 49 4e 3d 2d 31 2e 31 32 35 20   ..ý ZMIN=-1.125 	
+    2d 20 66 6c 61 74 20 65 6e 64 20 6d 69 6c 6c 29   - flat end mill)	
+    0a 4e 31 30 47 39 30 47 39 34 47 31 37 0a 4e 31   .N10G90G94G17.N1	
+    35 47 32 30 0a 4e 32 30 47 35 33 47 30 30 5a 30   5G20.N20G53G00Z0	
+    2e 0a 0a 28 46 61 63 65 33 29 0a 4e 33 30 54 31   ...(Face3).N30T1	
+    4d 30 36 0a 4e 33 35 53 36 35 30 30 4d 30 33 0a   M06.N35S6500M03.	
+    4e 34 30 47 35 34 0a 4e 34 35 4d 30 38 0a 4e 36   N40G54.N45M08.N6	
+    30 47 30 30 58 35 2e 36 37 35 59 30 2e 33 31 34   0G00X5.675Y0.314	
+    37 0a 4e 26                                       7.N&            	
+[30/10/2017 10:32:38] Read data (COM2)	
+    06                                                .               	
+[30/10/2017 10:32:38] Written data (COM2)	
+    01 03 fc 36 35 47 34 33 5a 31 2e 48 31 0a 4e 37   ..ü65G43Z1.H1.N7	
+    30 54 33 0a 4e 37 35 47 30 30 5a 30 2e 35 0a 4e   0T3.N75G00Z0.5.N	
+    38 30 47 30 31 5a 30 2e 31 37 35 46 36 35 2e 0a   80G01Z0.175F65..	
+    4e 38 35 47 31 38 47 30 33 58 35 2e 34 37 35 5a   N85G18G03X5.475Z	
+    2d 30 2e 30 32 35 49 2d 30 2e 32 4b 30 2e 0a 4e   -0.025I-0.2K0..N	
+    39 30 47 30 31 58 34 2e 33 37 35 0a 4e 39 35 58   90G01X4.375.N95X	
+    30 2e 0a 4e 31 30 30 47 31 37 47 30 32 59 31 2e   0..N100G17G02Y1.	
+    36 31 30 33 49 30 2e 4a 30 2e 36 34 37 38 0a 4e   6103I0.J0.6478.N	
+    31 30 35 41                                       105A            	
+[30/10/2017 10:32:38] Read data (COM2)	
+    06                                                .               	
+[30/10/2017 10:32:38] Written data (COM2)	
+    01 04 fb 47 30 31 58 34 2e 33 37 35 0a 4e 31 31   ..ûG01X4.375.N11	
+    30 47 30 33 59 32 2e 39 30 36 49 30 2e 4a 30 2e   0G03Y2.906I0.J0.	
+    36 34 37 38 0a 4e 31 31 35 47 30 31 58 30 2e 0a   6478.N115G01X0..	
+    4e 31 32 30 47 31 38 47 30 33 58 2d 30 2e 32 5a   N120G18G03X-0.2Z	
+    30 2e 31 37 35 49 30 2e 4b 30 2e 32 0a 4e 31 32   0.175I0.K0.2.N12	
+    35 47 30 30 5a 30 2e 35 0a 4e 31 33 30 58 2d 31   5G00Z0.5.N130X-1	
+    2e 33 59 30 2e 33 31 34 37 0a 4e 31 33 35 47 30   .3Y0.3147.N135G0	
+    31 5a 30 2e 31 32 35 46 36 35 2e 0a 4e 31 34 30   1Z0.125F65..N140	
+    47 30 32 fe                                       G02þ            	
+[30/10/2017 10:32:38] Read data (COM2)	
+    06                                                .               	
+[30/10/2017 10:32:38] Written data (COM2)	
+    01 05 fa 58 2d 31 2e 31 5a 2d 30 2e 30 37 35 49   ..úX-1.1Z-0.075I	
+    30 2e 32 4b 30 2e 0a 4e 31 34 35 47 30 31 58 30   0.2K0..N145G01X0	
+    2e 0a 4e 31 35 30 58 34 2e 33 37 35 0a 4e 31 35   ..N150X4.375.N15	
+    35 47 31 37 47 30 33 59 31 2e 36 31 30 33 49 30   5G17G03Y1.6103I0	
+    2e 4a 30 2e 36 34 37 38 0a 4e 31 36 30 47 30 31   .J0.6478.N160G01	
+    58 30 2e 0a 4e 31 36 35 47 30 32 59 32 2e 39 30   X0..N165G02Y2.90	
+    36 49 30 2e 4a 30 2e 36 34 37 38 0a 4e 31 37 30   6I0.J0.6478.N170	
+    47 30 31 58 34 2e 33 37 35 0a 4e 31 37 35 47 31   G01X4.375.N175G1	
+    38 47 30 1c                                       8G0.            	
+[30/10/2017 10:32:38] Read data (COM2)	
+    06                                                .               	
+[30/10/2017 10:32:38] Written data (COM2)	
+    01 06 f9 32 58 34 2e 35 37 35 5a 30 2e 31 32 35   ..ù2X4.575Z0.125	
+    49 30 2e 4b 30 2e 32 0a 4e 31 38 30 47 30 30 5a   I0.K0.2.N180G00Z	
+    30 2e 35 0a 4e 31 38 35 58 35 2e 36 37 35 59 30   0.5.N185X5.675Y0	
+    2e 33 31 34 37 0a 4e 31 39 30 47 30 31 5a 30 2e   .3147.N190G01Z0.	
+    30 37 35 46 36 35 2e 0a 4e 31 39 35 47 30 33 58   075F65..N195G03X	
+    35 2e 34 37 35 5a 2d 30 2e 31 32 35 49 2d 30 2e   5.475Z-0.125I-0.	
+    32 4b 30 2e 0a 4e 32 30 30 47 30 31 58 34 2e 33   2K0..N200G01X4.3	
+    37 35 0a 4e 32 30 35 58 30 2e 0a 4e 32 31 30 47   75.N205X0..N210G	
+    31 37 47 23                                       17G#            	
+[30/10/2017 10:32:38] Read data (COM2)	
+    06                                                .               	
+[30/10/2017 10:32:38] Written data (COM2)	
+    01 07 f8 30 32 59 31 2e 36 31 30 33 49 30 2e 4a   ..ø02Y1.6103I0.J	
+    30 2e 36 34 37 38 0a 4e 32 31 35 47 30 31 58 34   0.6478.N215G01X4	
+    2e 33 37 35 0a 4e 32 32 30 47 30 33 59 32 2e 39   .375.N220G03Y2.9	
+    30 36 49 30 2e 4a 30 2e 36 34 37 38 0a 4e 32 32   06I0.J0.6478.N22	
+    35 47 30 31 58 30 2e 0a 4e 32 33 30 47 31 38 47   5G01X0..N230G18G	
+    30 33 58 2d 30 2e 32 5a 30 2e 30 37 35 49 30 2e   03X-0.2Z0.075I0.	
+    4b 30 2e 32 0a 4e 32 33 35 47 30 30 5a 31 2e 0a   K0.2.N235G00Z1..	
+    4e 32 34 30 4d 30 35 0a 4e 32 34 35 47 35 33 47   N240M05.N245G53G	
+    30 30 5a 29                                       00Z)            	
+[30/10/2017 10:32:38] Read data (COM2)	
+    06                                                .               	
+[30/10/2017 10:32:38] Written data (COM2)	
+    01 08 f7 30 2e 0a 0a 4e 36 36 34 33 35 4d 30 35   ..÷0...N66435M05	
+    0a 4e 36 36 34 34 30 4d 30 39 0a 4e 36 36 34 34   .N66440M09.N6644	
+    35 47 35 33 47 30 30 5a 30 2e 0a 4e 36 36 34 35   5G53G00Z0..N6645	
+    35 58 32 2e 31 38 37 35 0a 4e 36 36 34 36 30 47   5X2.1875.N66460G	
+    35 33 59 30 2e 0a 4e 36 36 34 36 35 4d 33 30 0a   53Y0..N66465M30.	
+    0a 25 0a 1a 1a 1a 1a 1a 1a 1a 1a 1a 1a 1a 1a 1a   .%..............	
+    1a 1a 1a 1a 1a 1a 1a 1a 1a 1a 1a 1a 1a 1a 1a 1a   ................	
+    1a 1a 1a 1a 1a 1a 1a 1a 1a 1a 1a 1a 1a 1a 1a 1a   ................	
+    1a 1a 1a e4                                       ...ä            	
+[30/10/2017 10:32:38] Read data (COM2)	
+    06                                                .               	
+[30/10/2017 10:32:38] Written data (COM2)	
+    04                                                .               	
+[30/10/2017 10:32:38] Read data (COM2)	
+    18 18 18                                          ...          .               	
+```
+
+<p align="center">
+Figure 24. PC to CNC
+</p>
 
 ## Refrences
 
